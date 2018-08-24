@@ -1,0 +1,9 @@
+cmd
+cd C:\javaDev\app\apache-tomcat-7.0.72\bin
+digest.bat -a SHA {암호화할 password}
+
+digest.bat -a SHA ttfuture_01
+ttfuture_01:be1739df51d8f134a8dfd2aa8488a9946c138d45
+
+digest.bat -a SHA oracle
+oracle:431364b6450fc47ccdbf6a2205dfdb1baeb79412
