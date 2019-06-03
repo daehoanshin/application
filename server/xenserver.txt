@@ -1,0 +1,27 @@
+젠서버 접속
+
+
+
+# iptables
+
+indexer2
+iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 8002 -j DNAT --to 192.168.168.243:8000
+iptables -I FORWARD -i xenbr0 -p tcp --dport 8000 -d 192.168.168.243 -j ACCEPT
+
+iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 2203 -j DNAT --to 192.168.168.243:22
+iptables -I FORWARD -i xenbr0 -p tcp --dport 22 -d 192.168.168.243 -j ACCEPT
+
+sudo iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 9000 -j DNAT --to 192.168.168.243:9000
+sudo iptables -I FORWARD -i xenbr0 -p tcp --dport 9000 -d 192.168.168.243 -j ACCEPT
+
+iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 9089 -j DNAT --to 192.168.168.243:9089
+iptables -I FORWARD -i xenbr0 -p tcp --dport 9089 -d 192.168.168.243 -j ACCEPT
+
+
+HTTP COLLECTOR
+iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 9088 -j DNAT --to 192.168.168.243:9088
+iptables -I FORWARD -i xenbr0 -p tcp --dport 9088 -d 192.168.168.243 -j ACCEPT
+
+# apache
+sudo iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 9001 -j DNAT --to 192.168.168.243:9001
+sudo iptables -I FORWARD -i xenbr0 -p tcp --dport 9001 -d 192.168.168.243 -j ACCEPT
