@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 # 설치
 sudo yum installed |grep httpd
@@ -18,3 +19,25 @@ sudo systemctl list-unit-files --type=service |grep httpd
 sudo systemctl start httpd
 sudo systemctl stop httpd
 sudo systemctl status httpd.service
+=======
+
+# 설치
+sudo yum installed |grep httpd
+sudo yum list installed |grep httpd
+
+
+# 방화벽
+sudo firewall-cmd --state
+sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --permanent --add-service=https
+sudo firewall-cmd --list-all
+sudo firewall-cmd --reload
+
+
+# 서비스시작
+sudo systemctl enable httpd.service
+sudo systemctl list-unit-files --type=service |grep httpd
+sudo systemctl start httpd
+sudo systemctl stop httpd
+sudo systemctl status httpd.service
+>>>>>>> Stashed changes
