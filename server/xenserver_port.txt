@@ -25,3 +25,17 @@ iptables -I FORWARD -i xenbr0 -p tcp --dport 9088 -d 192.168.168.243 -j ACCEPT
 # apache
 iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 9001 -j DNAT --to 192.168.168.243:9001
 iptables -I FORWARD -i xenbr0 -p tcp --dport 9001 -d 192.168.168.243 -j ACCEPT
+
+# mysql
+iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 3306 -j DNAT --to 192.168.168.243:3306
+iptables -I FORWARD -i xenbr0 -p tcp --dport 3306 -d 192.168.168.243 -j ACCEPT
+
+# oracle
+iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 1521 -j DNAT --to 192.168.168.243:1521
+iptables -I FORWARD -i xenbr0 -p tcp --dport 1521 -d 192.168.168.243 -j ACCEPT
+
+iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 1539 -j DNAT --to 192.168.168.243:1539
+iptables -I FORWARD -i xenbr0 -p tcp --dport 1539 -d 192.168.168.243 -j ACCEPT
+
+iptables -t nat -A PREROUTING -p tcp -i xenbr0 --dport 5500 -j DNAT --to 192.168.168.243:5500
+iptables -I FORWARD -i xenbr0 -p tcp --dport 5500 -d 192.168.168.243 -j ACCEPT
