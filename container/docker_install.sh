@@ -27,3 +27,9 @@ sudo curl -L https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/com
 # https://docs.docker.com/install/linux/linux-postinstall/
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+
+안됨
+
+# sudo apt-get install docker.io
+성공
