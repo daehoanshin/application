@@ -82,6 +82,7 @@ default-character-set=utf8
 
 
 # MySQL root 비밀번호 설정
+1. mysqladmin을 이용하여 root 암호 설정
 mysqladmin -u root -p password '새로운비밀번호'
 mysqladmin -u root -p password 'bitek01!'
 
@@ -99,3 +100,5 @@ mysql>flush privileges;                                             //변경된 
 
 
 # 외부접속
+
+grant all privileges on *.* to 'root'@'%' identified by 'bitek01!';
