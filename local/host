@@ -41,8 +41,8 @@
 #192.168.43.71 ceres
 
 
-# bitek da(회사용)
-125.132.140.136	bitekda
+#bitek da(회사용)
+125.132.140.136	bitekda.com
 
 #회사용 마사용
 #192.168.168.173 localdev.com
