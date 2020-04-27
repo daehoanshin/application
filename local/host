@@ -21,16 +21,19 @@
 #	::1             localhost
 59.14.104.17 bitek.rational.rtc
 
-#매인컴퓨터eh58
-172.30.1.12		eh58	e560p	localdev.com
-#192.168.234.17		eh58	e560p	localdev.com
-172.30.1.51		sdhdev.com, h57
-#192.168.17.20	sdhdev.com
+# sdh server
+172.30.1.51	sdhdev.com	h57	instance-1
+# ksh
+172.30.1.60	ksm-pc
+# mac15
+172.30.1.52	mac15
+# 900x
+192.168.168.172	900x
 
 #local home wifi
 #192.168.168.183 ceres
-#192.168.17.48 ceres, localdev.com, e560p
-#172.30.1.6	ceres, localdev.com, e560p
+#192.168.17.48 ceres localdev.com e560p
+#172.30.1.6	ceres localdev.com  e560p
 
 
 
@@ -38,9 +41,13 @@
 #192.168.43.71 ceres
 
 
-#회사용
+#bitek da(회사용)
+125.132.140.136	bitekda.com
+
+#회사용 마사용
 #192.168.168.173 localdev.com
 #172.30.1.6 localdev.com
+
 
 
 #ubuntu test
