@@ -32,4 +32,5 @@ sudo usermod -aG docker $USER
 안됨
 
 # sudo apt-get install docker.io
+
 성공
